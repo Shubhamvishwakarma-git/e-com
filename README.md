@@ -77,5 +77,5 @@ Edit
 /lib        → Stripe, utilities, helpers  
 🔗 Live Demo
 🔗 View Live on Vercel
-(Replace with your actual live URL once deployed)
+https://e-com-mauve-two.vercel.app/
 >>>>>>> 6f8e18838eb6c846fc095d7a0b5642ab7ff6db37
