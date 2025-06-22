@@ -19,7 +19,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-blue-600 tracking-tight">
-          Eco<span className="text-gray-800">vacs</span>
+          Zentra<span className="text-gray-800">Cart</span> 
         </Link>
 
         {/* Center - Search Bar */}

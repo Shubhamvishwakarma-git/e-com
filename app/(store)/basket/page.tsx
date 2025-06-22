@@ -99,7 +99,7 @@ const BasketPage = () => {
               </div>
 
               <div className="flex-shrink-0">
-                <Addtobasketbutton product={item.product} disabled={false} />
+                <Addtobasketbutton product={item.product} disabled={false} hideActions />
               </div>
             </div>
           ))}

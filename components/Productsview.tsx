@@ -11,21 +11,17 @@ interface ProductsviewProps {
 
 const Productsview = ({ products, categories }: ProductsviewProps) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-6 px-4 py-8">
-      {/* Category Sidebar */}
-      <div className="w-full lg:w-64">
-        <div className="bg-white shadow-md rounded-xl p-4 sticky top-4">
-          <h2 className="text-lg font-semibold mb-4 text-gray-800">
-            Categories
-          </h2>
+    <div className="px-4 md:px-10 py-8 bg-gray-50 min-h-screen">
+      {/* Category Selector on Top */}
+      <div className="mb-6">
+        <h2 className="text-lg font-semibold text-gray-800 mb-2">Category</h2>
+        <div className="w-full max-w-xs">
           <Categoryselectorcomponent categories={categories} />
         </div>
       </div>
 
       {/* Product Grid */}
-      <div className="flex-1">
-        <ProductGrid products={products} />
-      </div>
+      <ProductGrid products={products} />
     </div>
   );
 };

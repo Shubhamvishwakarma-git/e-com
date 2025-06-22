@@ -39,8 +39,10 @@ export default async function RootLayout({
           <VisualEditing/>
           </>
         )}
-        <Header/>
-        <main>{children}</main>
+        
+          <Header/>
+        <main>
+          {children}</main>
         <SanityLive/>
         
       </body>

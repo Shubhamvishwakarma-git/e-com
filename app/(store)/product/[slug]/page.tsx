@@ -4,6 +4,7 @@ import { getProductBySlug } from "@/sanity/lib/products/getProductBySlug";
 import { PortableText } from "next-sanity";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export const dynamic = "force-static";
 export const revalidate = 60; // revalidate at most every 60 seconds
@@ -55,11 +56,13 @@ async function Productpage({ params }: { params: Promise<{ slug: string }> }) {
             <p className="text-2xl font-semibold text-blue-600 mb-6">
               ${product.price?.toFixed(2)}
             </p>
-            <div className="prose max-w-none text-gray-700 mb-6">
-              {Array.isArray(product.desc) && (
-                <PortableText value={product.desc} />
-              )}
-            </div>
+            <ScrollArea className="h-80 max-h-[24rem] pr-3 rounded-md border border-gray-200 bg-gray-50 mb-6 shadow-inner">
+              <div className="prose prose-sm prose-gray max-w-none px-4 py-2">
+                {Array.isArray(product.desc) && (
+                  <PortableText value={product.desc} />
+                )}
+              </div>
+            </ScrollArea>
           </div>
 
           <div className="mt-6">
